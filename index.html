@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pengda Chen 的个人主页" />
+    <title>Pengda Chen — Personal Website</title>
+    <style>
+      :root {
+        --ink: #171717;
+        --muted: #727272;
+        --line: #d8d8d8;
+        --paper: #fafafa;
+        --accent: #315f51;
+      }
+
+      * { box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+        line-height: 1.65;
+      }
+
+      a { color: inherit; text-decoration: none; }
+
+      .container { width: min(1120px, calc(100% - 48px)); margin: 0 auto; }
+
+      header {
+        border-bottom: 1px solid var(--line);
+        padding: 24px 0;
+      }
+
+      .nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+
+      .brand { font-size: 15px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+
+      .nav-links { display: flex; gap: 22px; color: var(--muted); font-size: 14px; }
+      .nav-links a:hover { color: var(--accent); }
+
+      main { padding: 92px 0 72px; }
+
+      .intro {
+        display: grid;
+        grid-template-columns: 1.25fr .75fr;
+        gap: clamp(38px, 7vw, 112px);
+        align-items: end;
+        padding-bottom: 86px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .eyebrow { margin: 0 0 18px; font-size: 12px; letter-spacing: .12em; color: var(--accent); text-transform: uppercase; }
+
+      h1 { margin: 0; max-width: 760px; font-size: clamp(42px, 7vw, 84px); font-weight: 400; letter-spacing: -.055em; line-height: 1.04; }
+
+      .intro-copy { margin: 30px 0 0; max-width: 580px; color: var(--muted); font-size: 17px; }
+
+      .photo-placeholder {
+        min-height: 335px;
+        border: 1px solid var(--line);
+        background: repeating-linear-gradient(135deg, transparent 0, transparent 13px, rgba(23, 23, 23, .035) 14px, rgba(23, 23, 23, .035) 15px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--muted);
+        font-size: 12px;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+      }
+
+      section { padding: 74px 0; border-bottom: 1px solid var(--line); }
+      .section-title { margin: 0 0 28px; font-size: 12px; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; }
+
+      .about { display: grid; grid-template-columns: .75fr 1.25fr; gap: 48px; }
+      .about p { margin: 0; max-width: 670px; font-size: 22px; letter-spacing: -.02em; }
+
+      .work-list { border-top: 1px solid var(--line); }
+      .work-item { display: grid; grid-template-columns: 90px 1fr auto; gap: 24px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+      .work-item span, .work-item time { color: var(--muted); font-size: 14px; }
+      .work-item strong { font-size: 16px; font-weight: 500; }
+
+      .contact { display: flex; align-items: baseline; justify-content: space-between; gap: 30px; }
+      .contact p { margin: 0; color: var(--muted); }
+      .email { border-bottom: 1px solid var(--ink); padding-bottom: 2px; font-size: clamp(20px, 3vw, 30px); }
+
+      footer { padding: 26px 0 34px; color: var(--muted); font-size: 12px; }
+      footer .container { display: flex; justify-content: space-between; gap: 16px; }
+
+      @media (max-width: 700px) {
+        .container { width: min(100% - 32px, 1120px); }
+        header { padding: 18px 0; }
+        .nav-links { gap: 14px; font-size: 12px; }
+        main { padding-top: 58px; }
+        .intro, .about { grid-template-columns: 1fr; }
+        .intro { padding-bottom: 58px; }
+        .photo-placeholder { min-height: 240px; }
+        .work-item { grid-template-columns: 64px 1fr; }
+        .work-item time { grid-column: 2; }
+        .contact, footer .container { display: block; }
+        .email { display: inline-block; margin-top: 18px; }
+        footer p + p { margin-top: 8px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <a class="brand" href="#top">Pengda Chen</a>
+        <nav class="nav-links" aria-label="主导航">
+          <a href="#about">About</a>
+          <a href="#work">Work</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top" class="container">
+      <section class="intro">
+        <div>
+          <p class="eyebrow">Personal Website / 2026</p>
+          <h1>你好，我是 Pengda Chen。</h1>
+          <p class="intro-copy">在这里记录正在学习的事、完成的项目，以及那些值得被慢慢打磨的想法。欢迎来到我的个人主页。</p>
+        </div>
+        <!-- 将下方区域替换为 <img src="你的图片路径" alt="Pengda Chen 的照片"> 即可放入个人照片。 -->
+        <div class="photo-placeholder" role="img" aria-label="个人照片预留区域">Image Placeholder</div>
+      </section>
+
+      <section id="about" class="about">
+        <h2 class="section-title">About</h2>
+        <p>我关注技术、设计与日常生活中细小却真实的问题。这个网站是一块持续生长的画布，用来分享经历、整理思考，也与有共同兴趣的人建立连接。</p>
+      </section>
+
+      <section id="work">
+        <h2 class="section-title">Selected Notes</h2>
+        <div class="work-list">
+          <article class="work-item"><span>01</span><strong>关于创造：从一个微小的问题开始</strong><time>2026</time></article>
+          <article class="work-item"><span>02</span><strong>正在进行的项目与实验</strong><time>2026</time></article>
+          <article class="work-item"><span>03</span><strong>阅读、观察与随手记录</strong><time>2025</time></article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div><h2 class="section-title">Contact</h2><p>有想法、合作或只是想打个招呼，都欢迎联系我。</p></div>
+        <a class="email" href="mailto:hello@example.com">hello@example.com</a>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© 2026 Pengda Chen. All rights reserved.</p>
+        <p>Built with care.</p>
+      </div>
+    </footer>
+  </body>
+</html>
