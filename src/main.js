@@ -7,7 +7,7 @@ const papers = [
 const imageDialog = document.querySelector('.image-dialog');
 const imageDialogImage = document.querySelector('.dialog-image');
 const imageDialogTitle = document.querySelector('#image-dialog-title');
-const comparisonDialog = document.querySelector('.comparison-dialog');
+const comparisonModal = document.querySelector('.comparison-modal');
 const toast = document.querySelector('.toast');
 let toastTimer;
 
@@ -79,10 +79,11 @@ panels.forEach(initialisePanel);
 function openComparison(leftPaper = null) {
   setPanel(panels[0], leftPaper);
   setPanel(panels[1], null);
-  comparisonDialog.showModal();
+  comparisonModal.hidden = false;
   (leftPaper ? panels[1] : panels[0]).querySelector('.model-search').focus();
 }
 document.querySelectorAll('.compare-button').forEach((button) => button.addEventListener('click', () => openComparison(findPaper(button.dataset.model))));
 document.querySelector('.nav-comparison').addEventListener('click', () => openComparison());
-document.querySelector('.close-comparison-dialog').addEventListener('click', () => comparisonDialog.close());
-comparisonDialog.addEventListener('click', (event) => { if (event.target === comparisonDialog) comparisonDialog.close(); });
+document.querySelector('.close-comparison-dialog').addEventListener('click', () => { comparisonModal.hidden = true; });
+comparisonModal.addEventListener('click', (event) => { if (event.target === comparisonModal) comparisonModal.hidden = true; });
+document.addEventListener('keydown', (event) => { if (event.key === 'Escape') comparisonModal.hidden = true; });

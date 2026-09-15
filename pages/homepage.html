@@ -12,8 +12,8 @@
       <div class="container nav">
         <a class="brand" href="#top">Pengda Chen</a>
         <nav class="nav-links" aria-label="主导航">
-          <a href="#reading-list">Reading List</a>
           <button class="nav-comparison" type="button">论文对比</button>
+          <a href="#reading-list">Reading List</a>
           <a href="#how-to-use">About</a>
         </nav>
       </div>
@@ -72,13 +72,15 @@
 
     <dialog class="image-dialog" aria-labelledby="image-dialog-title"><div class="dialog-bar"><p id="image-dialog-title">架构图</p><button class="close-image-dialog" type="button" aria-label="关闭放大图片">×</button></div><img class="dialog-image" src="" alt="" /></dialog>
 
-    <dialog class="comparison-dialog" aria-labelledby="comparison-dialog-title">
+    <div class="comparison-modal" hidden role="dialog" aria-modal="true" aria-labelledby="comparison-dialog-title">
+      <div class="comparison-modal-surface">
       <div class="dialog-bar"><div><p id="comparison-dialog-title">论文对比</p><span>从两个模型中选择架构图，并排查看。</span></div><button class="close-comparison-dialog" type="button" aria-label="关闭论文对比">×</button></div>
       <div class="comparison-grid">
         <section class="comparison-panel" data-side="left"><div class="panel-heading"><h3>左侧架构图</h3><button class="clear-panel" type="button">清空</button></div><label>模型名<input class="model-search" type="text" autocomplete="off" placeholder="输入模型名后按回车" /></label><ul class="suggestion-list" role="listbox" aria-label="相似模型建议"></ul><p class="panel-message" aria-live="polite"></p><div class="selected-architecture"><p>选择一个模型以显示架构图</p></div></section>
         <section class="comparison-panel" data-side="right"><div class="panel-heading"><h3>右侧架构图</h3><button class="clear-panel" type="button">清空</button></div><label>模型名<input class="model-search" type="text" autocomplete="off" placeholder="输入模型名后按回车" /></label><ul class="suggestion-list" role="listbox" aria-label="相似模型建议"></ul><p class="panel-message" aria-live="polite"></p><div class="selected-architecture"><p>选择一个模型以显示架构图</p></div></section>
       </div>
-    </dialog>
+      </div>
+    </div>
     <div class="toast" role="status" aria-live="polite"></div>
     <script src="../src/main.js"></script>
   </body>
