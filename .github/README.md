@@ -1,3 +1,11 @@
-# GitHub configuration
+# PengdaChen.github.io
 
-This folder is reserved for GitHub Actions workflows and other repository-level GitHub configuration.
+这是一个个人论文阅读清单网站，用于持续记录已阅读论文，并以自己的语言沉淀核心理解。
+
+每篇论文包含：论文名、模型名（作者命名或阅读时自定义的外号）、通俗易懂的关键词，以及论文原始架构图的缩略图。架构图可在网站中点击放大查看。
+
+## 添加一篇论文
+
+1. 将原论文架构图放入 `images/` 文件夹。
+2. 在 `pages/homepage.html` 的论文表格中新增一行，填写论文名、模型名、关键词，并将图片路径填入架构图按钮的 `data-full-image` 和 `img src`。
+3. 推送到 GitHub，GitHub Pages 会自动更新。
