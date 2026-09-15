@@ -3,19 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Pengda Chen 的个人主页" />
-    <title>Pengda Chen — Personal Website</title>
+    <meta name="description" content="Pengda Chen 的论文阅读清单" />
+    <title>Paper Reading List — Pengda Chen</title>
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
-    <header class="site-header" id="top"><div class="container nav"><a class="brand" href="#top">Pengda Chen</a><nav class="nav-links" aria-label="主导航"><a href="#about">About</a><a href="#work">Work</a><a href="#contact">Contact</a></nav></div></header>
+    <header class="site-header" id="top">
+      <div class="container nav">
+        <a class="brand" href="#top">Pengda Chen</a>
+        <nav class="nav-links" aria-label="主导航">
+          <a href="#reading-list">Reading List</a>
+          <a href="#how-to-use">About</a>
+        </nav>
+      </div>
+    </header>
+
     <main class="container">
-      <section class="intro"><div><p class="eyebrow">Personal Website / 2026</p><h1>你好，我是 Pengda Chen。</h1><p class="intro-copy">在这里记录正在学习的事、完成的项目，以及那些值得被慢慢打磨的想法。欢迎来到我的个人主页。</p></div><div class="photo-placeholder" role="img" aria-label="个人照片预留区域">Image Placeholder</div></section>
-      <section id="about" class="about"><h2 class="section-title">About</h2><p>我关注技术、设计与日常生活中细小却真实的问题。这个网站是一块持续生长的画布，用来分享经历、整理思考，也与有共同兴趣的人建立连接。</p></section>
-      <section id="work"><h2 class="section-title">Selected Notes</h2><div class="work-list"><article class="work-item"><span>01</span><strong>关于创造：从一个微小的问题开始</strong><time>2026</time></article><article class="work-item"><span>02</span><strong>正在进行的项目与实验</strong><time>2026</time></article><article class="work-item"><span>03</span><strong>阅读、观察与随手记录</strong><time>2025</time></article></div></section>
-      <section id="contact" class="contact"><div><h2 class="section-title">Contact</h2><p>有想法、合作或只是想打个招呼，都欢迎联系我。</p></div><a class="email" href="mailto:2634662548@qq.com">2634662548@qq.com</a></section>
+      <section class="intro">
+        <p class="eyebrow">Personal Knowledge Archive / 2026</p>
+        <h1>论文阅读清单</h1>
+        <p class="intro-copy">记录我读过的论文：保留论文原有的技术脉络，也用自己的语言留下模型名与最直白的关键词。</p>
+      </section>
+
+      <section id="reading-list" class="reading-list" aria-labelledby="reading-list-title">
+        <div class="section-heading">
+          <h2 id="reading-list-title">Reading List</h2>
+          <p>架构图缩略图可点击放大。</p>
+        </div>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">论文名</th>
+                <th scope="col">模型名</th>
+                <th scope="col">关键词</th>
+                <th scope="col">架构图</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- 新论文在此处添加一行；图片建议放在 ../images/ 文件夹。 -->
+              <tr class="sample-row">
+                <td><strong>下一篇待读论文</strong><span>等待补充论文标题与链接</span></td>
+                <td>—</td>
+                <td><span class="keyword">待阅读</span></td>
+                <td>
+                  <button class="thumbnail-button" type="button" data-full-image="../images/architecture-placeholder.svg" data-paper-title="架构图预留位置" aria-label="放大查看架构图预留位置">
+                    <img src="../images/architecture-placeholder.svg" alt="架构图预留示例" />
+                    <span>Click to enlarge</span>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="how-to-use" class="how-to-use">
+        <h2>How it works</h2>
+        <p>每读完一篇论文，我会补充模型名、用自己的理解提炼关键词，并上传原论文的架构图。缩略图只用于快速浏览；点击后可以查看完整图片。</p>
+      </section>
     </main>
-    <footer><div class="container"><p>© 2026 Pengda Chen. All rights reserved.</p><p>Built with care.</p></div></footer>
+
+    <footer><div class="container"><p>© 2026 Pengda Chen. All rights reserved.</p><p>Paper Reading List</p></div></footer>
+
+    <dialog class="image-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-bar"><p id="dialog-title">架构图</p><button class="close-dialog" type="button" aria-label="关闭放大图片">×</button></div>
+      <img class="dialog-image" src="" alt="" />
+    </dialog>
     <script src="../src/main.js"></script>
   </body>
 </html>
