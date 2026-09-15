@@ -79,11 +79,13 @@ panels.forEach(initialisePanel);
 function openComparison(leftPaper = null) {
   setPanel(panels[0], leftPaper);
   setPanel(panels[1], null);
+  comparisonModal.removeAttribute('hidden');
+  comparisonModal.classList.add('is-open');
   comparisonModal.hidden = false;
   (leftPaper ? panels[1] : panels[0]).querySelector('.model-search').focus();
 }
-document.querySelectorAll('.compare-button').forEach((button) => button.addEventListener('click', () => openComparison(findPaper(button.dataset.model))));
-document.querySelector('.nav-comparison').addEventListener('click', () => openComparison());
-document.querySelector('.close-comparison-dialog').addEventListener('click', () => { comparisonModal.hidden = true; });
-comparisonModal.addEventListener('click', (event) => { if (event.target === comparisonModal) comparisonModal.hidden = true; });
-document.addEventListener('keydown', (event) => { if (event.key === 'Escape') comparisonModal.hidden = true; });
+window.paperCompareOpen = (model = '') => openComparison(model ? findPaper(model) : null);
+function closeComparison() { comparisonModal.classList.remove('is-open'); comparisonModal.hidden = true; }
+document.querySelector('.close-comparison-dialog').addEventListener('click', closeComparison);
+comparisonModal.addEventListener('click', (event) => { if (event.target === comparisonModal) closeComparison(); });
+document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeComparison(); });

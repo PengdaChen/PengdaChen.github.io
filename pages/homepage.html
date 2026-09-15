@@ -12,7 +12,7 @@
       <div class="container nav">
         <a class="brand" href="#top">Pengda Chen</a>
         <nav class="nav-links" aria-label="主导航">
-          <button class="nav-comparison" type="button">论文对比</button>
+          <button class="nav-comparison" type="button" onclick="window.paperCompareOpen ? window.paperCompareOpen() : (document.querySelector('.comparison-modal').hidden = false)">论文对比</button>
           <a href="#reading-list">Reading List</a>
           <a href="#how-to-use">About</a>
         </nav>
@@ -42,7 +42,7 @@
                 <td>DINO</td>
                 <td><span class="keyword">自监督学习</span><span class="keyword">教师学生</span><span class="keyword">动量更新</span><span class="keyword">无标签蒸馏</span></td>
                 <td><button class="thumbnail-button" type="button" data-full-image="../images/dino-architecture.png" data-paper-title="DINO 架构图" aria-label="放大查看 DINO 架构图"><img src="../images/dino-architecture.png" alt="DINO 论文中的教师学生模型架构图" /><span>Click to enlarge</span></button></td>
-                <td><button class="compare-button" type="button" data-model="DINO" data-title="DINO" data-image="../images/dino-architecture.png">对比</button></td>
+                <td><button class="compare-button" type="button" data-model="DINO" data-title="DINO" data-image="../images/dino-architecture.png" onclick="window.paperCompareOpen ? window.paperCompareOpen('DINO') : (document.querySelector('.comparison-modal').hidden = false)">对比</button></td>
               </tr>
               <tr>
                 <td class="paper-index">02</td>
@@ -50,7 +50,7 @@
                 <td>Vision Transformer (ViT)</td>
                 <td><span class="keyword">图像分类</span><span class="keyword">图像切块</span><span class="keyword">Transformer 编码器</span><span class="keyword">类别标记</span></td>
                 <td><button class="thumbnail-button" type="button" data-full-image="../images/vit-architecture.png" data-paper-title="Vision Transformer (ViT) 架构图" aria-label="放大查看 Vision Transformer 架构图"><img src="../images/vit-architecture.png" alt="Vision Transformer 论文中的模型架构图" /><span>Click to enlarge</span></button></td>
-                <td><button class="compare-button" type="button" data-model="Vision Transformer (ViT)" data-title="Vision Transformer (ViT)" data-image="../images/vit-architecture.png">对比</button></td>
+                <td><button class="compare-button" type="button" data-model="Vision Transformer (ViT)" data-title="Vision Transformer (ViT)" data-image="../images/vit-architecture.png" onclick="window.paperCompareOpen ? window.paperCompareOpen('Vision Transformer (ViT)') : (document.querySelector('.comparison-modal').hidden = false)">对比</button></td>
               </tr>
               <tr>
                 <td class="paper-index">01</td>
@@ -58,7 +58,7 @@
                 <td>DETR</td>
                 <td><span class="keyword">目标检测</span><span class="keyword">Transformer</span><span class="keyword">集合预测</span><span class="keyword">二分图匹配</span></td>
                 <td><button class="thumbnail-button" type="button" data-full-image="../images/detr-architecture.png" data-paper-title="DETR 架构图" aria-label="放大查看 DETR 架构图"><img src="../images/detr-architecture.png" alt="DETR 论文中的模型架构图" /><span>Click to enlarge</span></button></td>
-                <td><button class="compare-button" type="button" data-model="DETR" data-title="DETR" data-image="../images/detr-architecture.png">对比</button></td>
+                <td><button class="compare-button" type="button" data-model="DETR" data-title="DETR" data-image="../images/detr-architecture.png" onclick="window.paperCompareOpen ? window.paperCompareOpen('DETR') : (document.querySelector('.comparison-modal').hidden = false)">对比</button></td>
               </tr>
             </tbody>
           </table>
