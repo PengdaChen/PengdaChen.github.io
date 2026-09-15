@@ -7,5 +7,5 @@
 ## 添加一篇论文
 
 1. 将原论文架构图放入 `images/` 文件夹。
-2. 在 `pages/homepage.html` 的论文表格中新增一行，填写论文名、模型名、关键词，并将图片路径填入架构图按钮的 `data-full-image` 和 `img src`。
+2. 在 `pages/homepage.html` 的论文表格顶部新增一行，填写下一个倒序编号、论文名、模型名、关键词，并将图片路径填入架构图按钮的 `data-full-image` 和 `img src`。
 3. 推送到 GitHub，GitHub Pages 会自动更新。
