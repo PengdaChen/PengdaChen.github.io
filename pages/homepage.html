@@ -13,6 +13,7 @@
         <a class="brand" href="#top">Pengda Chen</a>
         <nav class="nav-links" aria-label="主导航">
           <a href="#reading-list">Reading List</a>
+          <button class="nav-comparison" type="button">论文对比</button>
           <a href="#how-to-use">About</a>
         </nav>
       </div>
@@ -26,76 +27,59 @@
       </section>
 
       <section id="reading-list" class="reading-list" aria-labelledby="reading-list-title">
-        <div class="section-heading">
-          <h2 id="reading-list-title">Reading List</h2>
-          <p>架构图缩略图可点击放大。</p>
-        </div>
+        <div class="section-heading"><h2 id="reading-list-title">Reading List</h2><p>架构图缩略图可点击放大。</p></div>
         <div class="table-scroll">
           <table>
-            <thead>
-              <tr>
-                <th scope="col">编号</th>
-                <th scope="col">论文名</th>
-                <th scope="col">模型名</th>
-                <th scope="col">关键词</th>
-                <th scope="col">架构图</th>
-              </tr>
-            </thead>
+            <colgroup>
+              <col class="col-index" /><col class="col-paper" /><col class="col-model" /><col class="col-keywords" /><col class="col-image" /><col class="col-compare" />
+            </colgroup>
+            <thead><tr><th scope="col">编号</th><th scope="col">论文名</th><th scope="col">模型名</th><th scope="col">关键词</th><th scope="col">架构图</th><th scope="col">对比</th></tr></thead>
             <tbody>
-              <!-- 新论文在此处添加一行；图片建议放在 ../images/ 文件夹。 -->
+              <!-- 新论文添加在表格顶部；模型名与 data-model 保持一致。 -->
               <tr>
                 <td class="paper-index">03</td>
                 <td><strong>Emerging Properties in Self-Supervised Vision Transformers</strong><span>Caron et al., 2021</span></td>
                 <td>DINO</td>
                 <td><span class="keyword">自监督学习</span><span class="keyword">教师学生</span><span class="keyword">动量更新</span><span class="keyword">无标签蒸馏</span></td>
-                <td>
-                  <button class="thumbnail-button" type="button" data-full-image="../images/dino-architecture.png" data-paper-title="DINO 架构图" aria-label="放大查看 DINO 架构图">
-                    <img src="../images/dino-architecture.png" alt="DINO 论文中的教师学生模型架构图" />
-                    <span>Click to enlarge</span>
-                  </button>
-                </td>
+                <td><button class="thumbnail-button" type="button" data-full-image="../images/dino-architecture.png" data-paper-title="DINO 架构图" aria-label="放大查看 DINO 架构图"><img src="../images/dino-architecture.png" alt="DINO 论文中的教师学生模型架构图" /><span>Click to enlarge</span></button></td>
+                <td><button class="compare-button" type="button" data-model="DINO" data-title="DINO" data-image="../images/dino-architecture.png">对比</button></td>
               </tr>
               <tr>
                 <td class="paper-index">02</td>
                 <td><strong>An Image is Worth 16×16 Words: Transformers for Image Recognition at Scale</strong><span>Dosovitskiy et al., 2020</span></td>
                 <td>Vision Transformer (ViT)</td>
                 <td><span class="keyword">图像分类</span><span class="keyword">图像切块</span><span class="keyword">Transformer 编码器</span><span class="keyword">类别标记</span></td>
-                <td>
-                  <button class="thumbnail-button" type="button" data-full-image="../images/vit-architecture.png" data-paper-title="Vision Transformer (ViT) 架构图" aria-label="放大查看 Vision Transformer 架构图">
-                    <img src="../images/vit-architecture.png" alt="Vision Transformer 论文中的模型架构图" />
-                    <span>Click to enlarge</span>
-                  </button>
-                </td>
+                <td><button class="thumbnail-button" type="button" data-full-image="../images/vit-architecture.png" data-paper-title="Vision Transformer (ViT) 架构图" aria-label="放大查看 Vision Transformer 架构图"><img src="../images/vit-architecture.png" alt="Vision Transformer 论文中的模型架构图" /><span>Click to enlarge</span></button></td>
+                <td><button class="compare-button" type="button" data-model="Vision Transformer (ViT)" data-title="Vision Transformer (ViT)" data-image="../images/vit-architecture.png">对比</button></td>
               </tr>
               <tr>
                 <td class="paper-index">01</td>
                 <td><strong>End-to-End Object Detection with Transformers</strong><span>Carion et al., 2020</span></td>
                 <td>DETR</td>
                 <td><span class="keyword">目标检测</span><span class="keyword">Transformer</span><span class="keyword">集合预测</span><span class="keyword">二分图匹配</span></td>
-                <td>
-                  <button class="thumbnail-button" type="button" data-full-image="../images/detr-architecture.png" data-paper-title="DETR 架构图" aria-label="放大查看 DETR 架构图">
-                    <img src="../images/detr-architecture.png" alt="DETR 论文中的模型架构图" />
-                    <span>Click to enlarge</span>
-                  </button>
-                </td>
+                <td><button class="thumbnail-button" type="button" data-full-image="../images/detr-architecture.png" data-paper-title="DETR 架构图" aria-label="放大查看 DETR 架构图"><img src="../images/detr-architecture.png" alt="DETR 论文中的模型架构图" /><span>Click to enlarge</span></button></td>
+                <td><button class="compare-button" type="button" data-model="DETR" data-title="DETR" data-image="../images/detr-architecture.png">对比</button></td>
               </tr>
             </tbody>
           </table>
         </div>
       </section>
 
-      <section id="how-to-use" class="how-to-use">
-        <h2>How it works</h2>
-        <p>每读完一篇论文，我会补充模型名、用自己的理解提炼关键词，并上传原论文的架构图。缩略图只用于快速浏览；点击后可以查看完整图片。</p>
-      </section>
+      <section id="how-to-use" class="how-to-use"><h2>How it works</h2><p>每读完一篇论文，我会补充模型名、用自己的理解提炼关键词，并上传原论文的架构图。缩略图只用于快速浏览；点击后可以查看完整图片。</p></section>
     </main>
 
     <footer><div class="container"><p>© 2026 Pengda Chen. All rights reserved.</p><p>Paper Reading List</p></div></footer>
 
-    <dialog class="image-dialog" aria-labelledby="dialog-title">
-      <div class="dialog-bar"><p id="dialog-title">架构图</p><button class="close-dialog" type="button" aria-label="关闭放大图片">×</button></div>
-      <img class="dialog-image" src="" alt="" />
+    <dialog class="image-dialog" aria-labelledby="image-dialog-title"><div class="dialog-bar"><p id="image-dialog-title">架构图</p><button class="close-image-dialog" type="button" aria-label="关闭放大图片">×</button></div><img class="dialog-image" src="" alt="" /></dialog>
+
+    <dialog class="comparison-dialog" aria-labelledby="comparison-dialog-title">
+      <div class="dialog-bar"><div><p id="comparison-dialog-title">论文对比</p><span>从两个模型中选择架构图，并排查看。</span></div><button class="close-comparison-dialog" type="button" aria-label="关闭论文对比">×</button></div>
+      <div class="comparison-grid">
+        <section class="comparison-panel" data-side="left"><div class="panel-heading"><h3>左侧架构图</h3><button class="clear-panel" type="button">清空</button></div><label>模型名<input class="model-search" type="text" autocomplete="off" placeholder="输入模型名后按回车" /></label><ul class="suggestion-list" role="listbox" aria-label="相似模型建议"></ul><p class="panel-message" aria-live="polite"></p><div class="selected-architecture"><p>选择一个模型以显示架构图</p></div></section>
+        <section class="comparison-panel" data-side="right"><div class="panel-heading"><h3>右侧架构图</h3><button class="clear-panel" type="button">清空</button></div><label>模型名<input class="model-search" type="text" autocomplete="off" placeholder="输入模型名后按回车" /></label><ul class="suggestion-list" role="listbox" aria-label="相似模型建议"></ul><p class="panel-message" aria-live="polite"></p><div class="selected-architecture"><p>选择一个模型以显示架构图</p></div></section>
+      </div>
     </dialog>
+    <div class="toast" role="status" aria-live="polite"></div>
     <script src="../src/main.js"></script>
   </body>
 </html>
