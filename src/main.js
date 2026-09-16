@@ -11,6 +11,12 @@ const comparisonModal = document.querySelector('.comparison-modal');
 const toast = document.querySelector('.toast');
 let toastTimer;
 
+document.querySelector('.brand').addEventListener('click', (event) => {
+  event.preventDefault();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  history.replaceState(null, '', window.location.pathname);
+});
+
 function normalized(value) { return value.trim().toLowerCase(); }
 function findPaper(value) {
   const query = normalized(value);
