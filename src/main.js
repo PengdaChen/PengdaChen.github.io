@@ -1,4 +1,5 @@
 const papers = [
+  { model: 'CountVid', title: 'CountVid', image: '../images/countvid-architecture.png', aliases: ['countvid', 'video counting'] },
   { model: 'INSID3', title: 'INSID3', image: '../images/insid3-architecture.png', aliases: ['insid3', 'in-context segmentation'] },
   { model: 'DINO', title: 'DINO', image: '../images/dino-architecture.png' },
   { model: 'Vision Transformer (ViT)', title: 'Vision Transformer (ViT)', image: '../images/vit-architecture.png', aliases: ['vit', 'vision transformer'] },
