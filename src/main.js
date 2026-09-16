@@ -1,4 +1,5 @@
 const papers = [
+  { model: 'INSID3', title: 'INSID3', image: '../images/insid3-architecture.png', aliases: ['insid3', 'in-context segmentation'] },
   { model: 'DINO', title: 'DINO', image: '../images/dino-architecture.png' },
   { model: 'Vision Transformer (ViT)', title: 'Vision Transformer (ViT)', image: '../images/vit-architecture.png', aliases: ['vit', 'vision transformer'] },
   { model: 'DETR', title: 'DETR', image: '../images/detr-architecture.png' },
@@ -10,12 +11,6 @@ const imageDialogTitle = document.querySelector('#image-dialog-title');
 const comparisonModal = document.querySelector('.comparison-modal');
 const toast = document.querySelector('.toast');
 let toastTimer;
-
-document.querySelector('.brand').addEventListener('click', (event) => {
-  event.preventDefault();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-  history.replaceState(null, '', window.location.pathname);
-});
 
 function normalized(value) { return value.trim().toLowerCase(); }
 function findPaper(value) {

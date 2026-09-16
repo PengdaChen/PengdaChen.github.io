@@ -10,7 +10,7 @@
   <body>
     <header class="site-header" id="top">
       <div class="container nav">
-        <a class="brand" href="#top">Pengda Chen</a>
+        <a class="brand" href="#top" onclick="window.scrollTo(0, 0); document.documentElement.scrollTop = 0; document.body.scrollTop = 0; return false;">Pengda Chen</a>
         <nav class="nav-links" aria-label="主导航">
           <button class="nav-comparison" type="button" onclick="window.paperCompareOpen ? window.paperCompareOpen() : (document.querySelector('.comparison-modal').hidden = false)">论文对比</button>
           <a href="#reading-list">Reading List</a>
@@ -36,6 +36,14 @@
             <thead><tr><th scope="col">编号</th><th scope="col">论文名</th><th scope="col">模型名</th><th scope="col">关键词</th><th scope="col">架构图</th><th scope="col">对比</th></tr></thead>
             <tbody>
               <!-- 新论文添加在表格顶部；模型名与 data-model 保持一致。 -->
+              <tr>
+                <td class="paper-index">04</td>
+                <td><strong>INSID3: Training-Free In-Context Segmentation with DINOv3</strong><span>Cuttano et al., 2026 · CVPR 2026</span></td>
+                <td>INSID3</td>
+                <td><span class="keyword">上下文分割</span><span class="keyword">无训练</span><span class="keyword">DINOv3</span><span class="keyword">位置去偏</span></td>
+                <td><button class="thumbnail-button" type="button" data-full-image="../images/insid3-architecture.png" data-paper-title="INSID3 架构图" aria-label="放大查看 INSID3 架构图"><img src="../images/insid3-architecture.png" alt="INSID3 论文中的上下文分割模型架构图" /><span>Click to enlarge</span></button></td>
+                <td><button class="compare-button" type="button" data-model="INSID3" data-title="INSID3" data-image="../images/insid3-architecture.png" onclick="window.paperCompareOpen ? window.paperCompareOpen('INSID3') : (document.querySelector('.comparison-modal').hidden = false)">对比</button></td>
+              </tr>
               <tr>
                 <td class="paper-index">03</td>
                 <td><strong>Emerging Properties in Self-Supervised Vision Transformers</strong><span>Caron et al., 2021</span></td>
